@@ -38,6 +38,12 @@ export default function Dashboard() {
           >
             <Home size={18} /> {t("sidebar.home")}
           </button>
+          <button
+            onClick={() => navigate("/dashboard/team")}
+            className="flex items-center gap-2 text-sm hover:text-yellow-300"
+          >
+            <Users size={18} /> {t("sidebar.team")}
+          </button>
           <div>
             <button
               onClick={() => setOrgMenuOpen((open) => !open)}
@@ -68,12 +74,6 @@ export default function Dashboard() {
             className="flex items-center gap-2 text-sm hover:text-yellow-300"
           >
             <BarChart2 size={18} /> {t("sidebar.kpis")}
-          </button>
-          <button
-            onClick={() => navigate("/dashboard/team")}
-            className="flex items-center gap-2 text-sm hover:text-yellow-300"
-          >
-            <Users size={18} /> {t("sidebar.team")}
           </button>
         </nav>
         <div className="p-6 border-t border-gray-700 text-sm">

@@ -22,3 +22,33 @@ python3 -m venv env
 activa entorno virtual
 **********************
 source venv/bin/activate
+
+************
+rama en git
+************
+ git checkout -b nombre-de-la-rama
+
+**************
+actualizar git
+**************
+   # Ver qué archivos has modificado
+   git status
+
+   # Agregar los cambios al área de preparación
+   git add .
+
+   # Crear un commit con un mensaje descriptivo
+   git commit -m "Agregada nueva funcionalidad de autenticación"
+
+   # Subir los cambios a GitHub
+   git push -u origin nombre-de-la-rama
+
+## volver a la rama principal
+git checkout main
+
+## Actualizar la rama principal con los últimos cambios
+git pull origin main
+
+## Fusionar los cambios de tu rama a la principal:
+git merge nombre-de-la-rama
+

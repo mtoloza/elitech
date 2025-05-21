@@ -4,8 +4,6 @@ import { AuthProvider } from "./context/AuthContext";
 import { useAuth } from "./context/AuthContext";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
-import OrgChart from "./pages/OrgChart";
-import OrgChartHolding from "./pages/OrgChartHolding";
 import NotFound from "./pages/NotFound";
 import TeamMembers from "./pages/TeamMembers";
 import { Toaster } from "react-hot-toast";
@@ -34,10 +32,7 @@ export default function App() {
                 </ProtectedRoute>
               }
             >
-              <Route path="orgchart" element={<OrgChart />} />
-              <Route path="orgchart/:region" element={<OrgChart />} />
               <Route path="team-members" element={<TeamMembers />} />
-              <Route path="orgchartholding" element={<OrgChartHolding />} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>

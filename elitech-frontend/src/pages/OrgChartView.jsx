@@ -71,6 +71,12 @@ function CollapsibleNode({ data, isCollapsed, onToggle, selected }) {
     onToggle();
   };
 
+  const getCountryFlag = (location) => {
+    if (!location) return null;
+    const countryCode = location.toLowerCase();
+    return `https://flagcdn.com/w80/${countryCode}.png`;
+  };
+
   return (
     <div
       style={{
@@ -89,6 +95,23 @@ function CollapsibleNode({ data, isCollapsed, onToggle, selected }) {
         justifyContent: "space-between",
       }}
     >
+      {/* Bandera en la parte superior derecha */}
+      {data.location && (
+        <div style={{ position: "absolute", top: 8, right: 8, zIndex: 2 }}>
+          <img 
+            src={getCountryFlag(data.location)} 
+            alt={`${data.location} flag`}
+            style={{ 
+              width: 40, 
+              height: 30, 
+              objectFit: "cover", 
+              borderRadius: 4, 
+              boxShadow: "0 2px 4px rgba(0,0,0,0.2)",
+              border: "1px solid rgba(0,0,0,0.1)"
+            }}
+          />
+        </div>
+      )}
       <div>
         <div style={{ fontWeight: "bold", fontSize: 14 }}>{data.name}</div>
         <div style={{ fontSize: 12 }}>{data.position}</div>

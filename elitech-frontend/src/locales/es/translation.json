@@ -1,0 +1,9 @@
+{
+  "team": {
+    "form": {
+      "role_doc_url": "URL del Documento de Rol",
+      "roleDocUrlPlaceholder": "Ingrese la URL del documento de rol",
+      "viewDocument": "Ver documento"
+    }
+  }
+} 

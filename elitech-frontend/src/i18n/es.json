@@ -1,0 +1,83 @@
+{
+  "login": {
+    "title": "Iniciar Sesión",
+    "email": "Correo",
+    "password": "Contraseña",
+    "button": "Iniciar sesión",
+    "error": "Credenciales inválidas",
+    "success": "Inicio de sesión exitoso",
+    "failed": "Error al iniciar sesión"
+  },
+  "notfound": {
+    "title": "404",
+    "message": "Lo sentimos, la página que estás buscando no existe.",
+    "button": "Volver al inicio"
+  },
+  "sidebar": {
+    "home": "Inicio",
+    "org": "Organización TI",
+    "costs": "Costos",
+    "kpis": "KPIs",
+    "logout": "Cerrar sesión",
+    "team": "Miembros del Equipo"
+  },
+  "home": {
+    "org": {
+      "title": "Organización",
+      "description": "Ver la estructura de TI en las diferentes regiones.",
+      "button": "Ir al organigrama"
+    },
+    "costs": {
+      "title": "Costos",
+      "description": "Seguimiento de los costos de TI y comparación vs presupuesto.",
+      "button": "Ir a Costos"
+    },
+    "kpis": {
+      "title": "KPIs",
+      "description": "Analizar métricas clave de desempeño en TI.",
+      "button": "Ver KPIs"
+    }
+  },
+  "orgchart": {
+    "allRegions": "Todas las regiones",
+    "allRoles": "Todos los roles"
+  },
+  "team": {
+    "title": "Miembros del Equipo",
+    "add": "Agregar Miembro",
+    "edit": "Editar",
+    "name": "Nombre",
+    "position": "Cargo",
+    "region": "Región",
+    "role": "Rol",
+    "actions": "Acciones",
+    "saved": "Miembro guardado exitosamente",
+    "deleted": "Miembro eliminado exitosamente",
+    "deleteError": "Error al eliminar miembro",
+    "saveError": "Error al guardar miembro",
+    "confirmDelete": "¿Estás seguro de que deseas eliminar este miembro?",
+    "search": "Buscar miembros del equipo...",
+    "form": {
+      "name": "Nombre",
+      "position": "Cargo",
+      "area": "Área",
+      "region": "Región",
+      "location": "Ubicación",
+      "role_description": "Descripción del Rol",
+      "email": "Correo Electrónico",
+      "phone": "Teléfono",
+      "role_type": "Tipo de Rol",
+      "reports_to_id": "Reporta a (ID)",
+      "role_doc_url": "URL del Documento",
+      "cancel": "Cancelar",
+      "save": "Guardar",
+      "selectManager": "Seleccione Responsable",
+      "noSupervisor": "Sin supervisor (ninguno)",
+      "required": "Este campo es requerido",
+      "invalidEmail": "Correo electrónico inválido"
+    }
+  },
+  "logout": {
+    "success": "Sesión cerrada exitosamente"
+  }
+}

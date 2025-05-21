@@ -1,0 +1,9 @@
+{
+  "team": {
+    "form": {
+      "role_doc_url": "Role Document URL",
+      "roleDocUrlPlaceholder": "Enter the role document URL",
+      "viewDocument": "View document"
+    }
+  }
+} 

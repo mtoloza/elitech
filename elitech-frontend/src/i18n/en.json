@@ -1,0 +1,83 @@
+{
+  "login": {
+    "title": "Sign In",
+    "email": "Email",
+    "password": "Password",
+    "button": "Log In",
+    "error": "Invalid credentials",
+    "success": "Login successful",
+    "failed": "Login failed"
+  },
+  "notfound": {
+    "title": "404",
+    "message": "Sorry, the page you are looking for does not exist.",
+    "button": "Back to Home"
+  },
+  "sidebar": {
+    "home": "Home",
+    "org": "IT Organization",
+    "costs": "Costs",
+    "kpis": "KPIs",
+    "logout": "Log Out",
+    "team": "Team Members"
+  },
+  "home": {
+    "org": {
+      "title": "Organization",
+      "description": "View the IT structure across regions.",
+      "button": "Go to Org Chart"
+    },
+    "costs": {
+      "title": "Costs",
+      "description": "Track IT-related costs and compare vs budget.",
+      "button": "Go to Costs"
+    },
+    "kpis": {
+      "title": "KPIs",
+      "description": "Analyze key IT performance metrics.",
+      "button": "View KPIs"
+    }
+  },
+  "orgchart": {
+    "allRegions": "All Regions",
+    "allRoles": "All Roles"
+  },
+  "team": {
+    "title": "Team Members",
+    "add": "Add Member",
+    "edit": "Edit",
+    "name": "Name",
+    "position": "Position",
+    "region": "Region",
+    "role": "Role",
+    "actions": "Actions",
+    "saved": "Member saved successfully",
+    "deleted": "Member deleted successfully",
+    "deleteError": "Error deleting member",
+    "saveError": "Error saving member",
+    "confirmDelete": "Are you sure you want to delete this member?",
+    "search": "Search team members...",
+    "form": {
+      "name": "Name",
+      "position": "Position",
+      "area": "Area",
+      "region": "Region",
+      "role_description": "Role Description",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "role_type": "Role Type",
+      "reports_to_id": "Reports To (ID)",
+      "role_doc_url": "Document URL",
+      "cancel": "Cancel",
+      "save": "Save",
+      "selectManager": "Select Manager",
+      "noSupervisor": "No supervisor (none)",
+      "required": "This field is required",
+      "invalidEmail": "Invalid email address"
+    }
+  },
+  "logout": {
+    "success": "Logged out successfully"
+  }
+}

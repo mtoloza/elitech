@@ -1,0 +1,24 @@
+*********************** 
+inicializar el backend
+***********************
+uvicorn main:app --reload
+
+***********************
+inicializar el frontend
+***********************
+npm run dev
+
+******************
+SSH connect to AWS
+******************
+ssh -i /Users/maotoloza/Dropbox/mt_dev/ubuntuMT.pem ubuntu@18.208.173.84
+
+********************
+crea entorno virtual
+********************
+python3 -m venv env
+
+**********************
+activa entorno virtual
+**********************
+source venv/bin/activate

@@ -301,10 +301,10 @@ const OrgChartView = () => {
   }
 
   return (
-    <div className="p-8">
-      <h1 className="text-2xl font-bold mb-8 text-center">
-        Organigrama {view.charAt(0).toUpperCase() + view.slice(1)}
-      </h1>
+    <div className="p-8" style={{ padding: "0.5rem" }}>
+      <h2 className="text-2xl font-bold mb-8 text-center" style={{ marginBottom: "0rem" }}>
+        {view.charAt(0).toUpperCase() + view.slice(1)}
+      </h2>
       <div style={{ width: "100%", height: "calc(100vh - 200px)" }}>
         <ReactFlowProvider>
           <OrgChartFlow

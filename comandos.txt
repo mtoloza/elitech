@@ -1,7 +1,7 @@
 *********************** 
 inicializar el backend
 ***********************
-uvicorn main:app --reload
+uvicorn app.main:app --reload
 
 ***********************
 inicializar el frontend

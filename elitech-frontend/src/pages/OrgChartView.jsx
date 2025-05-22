@@ -15,8 +15,9 @@ import dagre from "dagre";
 import "reactflow/dist/style.css";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import noPicture from "../assets/pictures/nopicture.png";
 
-const nodeWidth = 220;
+const nodeWidth = 280;
 const nodeHeight = 150;
 
 const roleColors = {
@@ -112,11 +113,39 @@ function CollapsibleNode({ data, isCollapsed, onToggle, selected }) {
           />
         </div>
       )}
+
       <div>
         <div style={{ fontWeight: "bold", fontSize: 14 }}>{data.name}</div>
         <div style={{ fontSize: 12 }}>{data.position}</div>
         <div style={{ fontSize: 12 }}>{data.role_type}</div>
       </div>
+
+      {/* Foto del miembro en la parte inferior izquierda */}
+      {data.photo_url && (
+        <div style={{ 
+          position: "absolute", 
+          bottom: 8, 
+          left: 8, 
+          zIndex: 2,
+          width: 50,
+          height: 50,
+          borderRadius: "50%",
+          overflow: "hidden",
+          border: "2px solid #fff",
+          boxShadow: "0 2px 4px rgba(0,0,0,0.2)"
+        }}>
+          <img 
+            src={data.photo_url} 
+            alt={`${data.name} photo`}
+            style={{ 
+              width: "100%", 
+              height: "100%", 
+              objectFit: "cover"
+            }}
+          />
+        </div>
+      )}
+
       {data.hasChildren && (
         <div
           style={{
@@ -174,6 +203,7 @@ function membersToGraph(members, collapsedSet) {
         color,
         hasChildren,
         isCollapsed,
+        photo_url: noPicture,
       },
       style: {},
     });

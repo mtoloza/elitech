@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+siempre que cree una pantalla, formulario o pagina, debe usar los componentes de Button, Card e Input preestablecidos en la ruta src/components/ui/

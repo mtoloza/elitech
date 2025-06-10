@@ -16,6 +16,7 @@ import "reactflow/dist/style.css";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import noPicture from "../assets/pictures/nopicture.png";
+import { API_URL } from "@/config";
 
 const nodeWidth = 280;
 const nodeHeight = 150;
@@ -296,7 +297,7 @@ const OrgChartView = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`http://localhost:8000/team/org/${view}`);
+        const response = await axios.get(`${API_URL}/team/org/${view}`);
         const arr = Array.isArray(response.data) ? response.data : [];
         const { nodes: graphNodes, edges: graphEdges } = membersToGraph(arr, collapsed);
         const { nodes: layoutedNodes, edges: layoutedEdges } = getLayoutedElements(graphNodes, graphEdges, "TB");

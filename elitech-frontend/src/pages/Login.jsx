@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import Input from "../components/ui/Input";
 import Button from "../components/ui/Button";
 import logo from "../assets/logo_elite_group_b.png";
+import { API_URL } from "@/config";
 
 export default function Login() {
   const { t } = useTranslation();
@@ -26,7 +27,7 @@ export default function Login() {
     setError("");
 
     try {
-      const res = await fetch("http://localhost:8000/auth/login", {
+      const res = await fetch(`${API_URL}/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({

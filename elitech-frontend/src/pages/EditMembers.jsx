@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Button from "../components/ui/Button";
+import { API_URL } from "@/config";
 
 export default function EditTeamMember() {
   const { t } = useTranslation();
@@ -13,7 +14,7 @@ export default function EditTeamMember() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/team/${id}`)
+    fetch(`${API_URL}/team/${id}`)
       .then((res) => res.json())
       .then(setMember)
       .catch(setError)
@@ -27,7 +28,7 @@ export default function EditTeamMember() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:8000/team/${id}`, {
+    fetch(`${API_URL}/team/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(member),

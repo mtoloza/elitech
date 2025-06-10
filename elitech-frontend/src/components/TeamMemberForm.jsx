@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Button from "./ui/Button";
+import { API_URL } from "@/config";
 
 export default function TeamMemberForm({ member = {}, onSave, onCancel }) {
   const { t } = useTranslation();
@@ -24,7 +25,7 @@ export default function TeamMemberForm({ member = {}, onSave, onCancel }) {
 
   useEffect(() => {
     // Cargar miembros para la lista desplegable
-    fetch("http://localhost:8000/team")
+    fetch(`${API_URL}/team`)
       .then((res) => res.json())
       .then((data) => setAllMembers(data))
       .catch((err) => console.error("Error loading team list:", err));

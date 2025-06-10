@@ -2,6 +2,7 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import { useTranslation } from "react-i18next";
+import { API_URL } from "@/config";
 
 const AuthContext = createContext();
 
@@ -15,7 +16,7 @@ export function AuthProvider({ children }) {
   // Función para manejar el refresh del token
   const refreshAccessToken = async () => {
     try {
-      const response = await fetch("http://localhost:8000/auth/refresh", {
+      const response = await fetch(`${API_URL}/auth/refresh`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -80,7 +81,7 @@ export function AuthProvider({ children }) {
     const fetchUser = async () => {
       if (accessToken) {
         try {
-          const response = await fetchWithAuth("http://localhost:8000/auth/me");
+          const response = await fetchWithAuth(`${API_URL}/auth/me`);
           if (!response.ok) throw new Error("Failed to get user data");
           const userData = await response.json();
           setUser(userData);

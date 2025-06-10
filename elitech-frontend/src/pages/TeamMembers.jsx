@@ -7,6 +7,7 @@ import Card from "../components/ui/Card";
 import Button from "../components/ui/Button";
 import TeamMemberForm from "../components/TeamMemberForm";
 import { useAuth } from "../context/AuthContext";
+import { API_URL } from "@/config";
 
 export default function TeamMembers() {
   const { t } = useTranslation();
@@ -20,7 +21,7 @@ export default function TeamMembers() {
   const [roleFilter, setRoleFilter] = useState("");
 
   const fetchMembers = async () => {
-    const res = await fetch("http://localhost:8000/team");
+    const res = await fetch(`${API_URL}/team`);
     const data = await res.json();
     setMembers(data);
   };
@@ -32,7 +33,7 @@ export default function TeamMembers() {
   const handleDelete = async (id) => {
     const confirm = window.confirm(t("team.confirmDelete"));
     if (!confirm) return;
-    const res = await fetch(`http://localhost:8000/team/${id}`, { method: "DELETE" });
+    const res = await fetch(`${API_URL}/team/${id}`, { method: "DELETE" });
     if (res.ok) {
       toast.success(t("team.deleted"));
       fetchMembers();
@@ -54,8 +55,8 @@ export default function TeamMembers() {
   const handleSave = async (formData) => {
     try {
       const url = selected 
-        ? `http://localhost:8000/team/${selected.id}`
-        : "http://localhost:8000/team";
+        ? `${API_URL}/team/${selected.id}`
+        : `${API_URL}/team`;
       
       const method = selected ? "PUT" : "POST";
       

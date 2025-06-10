@@ -52,3 +52,23 @@ git pull origin main
 ## Fusionar los cambios de tu rama a la principal:
 git merge nombre-de-la-rama
 
+**************
+conectar a AWS
+**************
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 937001371547.dkr.ecr.us-east-1.amazonaws.com
+
+
+
+******************************************
+desplegar el frontend en DOCKER TAG Y push
+******************************************
+docker buildx build --platform linux/amd64 -t elitech-frontend:latest .
+docker tag elitech-frontend:latest 937001371547.dkr.ecr.us-east-1.amazonaws.com/elitech-frontend
+docker push 937001371547.dkr.ecr.us-east-1.amazonaws.com/elitech-frontend:latest  
+
+******************************************
+desplegar el BACKEND en DOCKER TAG Y push
+******************************************
+docker buildx build --platform linux/amd64 -t elitech-backend:latest .
+docker tag elitech-backend:latest 937001371547.dkr.ecr.us-east-1.amazonaws.com/elitech-backend:latest
+docker push 937001371547.dkr.ecr.us-east-1.amazonaws.com/elitech-backend:latest  

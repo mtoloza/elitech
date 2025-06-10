@@ -79,5 +79,9 @@
   },
   "logout": {
     "success": "Sesión cerrada exitosamente"
+  },
+  "memberList": {
+    "title": "Lista de Miembros",
+    "noResults": "No se encontraron miembros."
   }
 }

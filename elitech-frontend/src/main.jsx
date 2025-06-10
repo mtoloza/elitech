@@ -12,6 +12,7 @@ import { AuthProvider, useAuth } from "./context/AuthContext";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import TeamMembers from "./pages/TeamMembers";
 import OrgChartView from "./pages/OrgChartView";
+import MemberList from "./pages/MemberList";
 import "./index.css";
 
 // Redirección inicial
@@ -38,6 +39,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Route index element={<Home />} />
             <Route path="org/:view" element={<OrgChartView />} />
             <Route path="team" element={<TeamMembers />} />
+            <Route path="member-list" element={<MemberList />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

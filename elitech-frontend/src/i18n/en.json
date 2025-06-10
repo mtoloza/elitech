@@ -79,5 +79,9 @@
   },
   "logout": {
     "success": "Logged out successfully"
+  },
+  "memberList": {
+    "title": "Member List",
+    "noResults": "No members found."
   }
 }

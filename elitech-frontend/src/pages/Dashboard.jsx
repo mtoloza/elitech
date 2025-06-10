@@ -75,6 +75,12 @@ export default function Dashboard() {
           >
             <BarChart2 size={18} /> {t("sidebar.kpis")}
           </button>
+          <button
+            onClick={() => navigate("/dashboard/member-list")}
+            className="flex items-center gap-2 text-sm hover:text-yellow-300"
+          >
+            <Users size={18} /> Member List
+          </button>
         </nav>
         <div className="p-6 border-t border-gray-700 text-sm">
           <div className="mb-2">
